@@ -1,20 +1,24 @@
 #include<iostream>
 using namespace std;
- 
-int main(){
-    int n;
-    cin>>n;
-    while (n--)
-    {
-        int a1,a2,b1,b2;
-        char w;
-        cin>>w>>a1>>a2>>b1>>b2;
-        switch(w){
-            case '+':cout<<a1+b1<<" "<<a2+b2<<"\n";break;
-            case '-':cout<<a1-b1<<" "<<a2-b2<<"\n";break;
-            case '*':cout<<a1*b1-a2*b2<<" "<<a2*b1+a1*b2<<"\n";break;
-            case '/':cout<<(a1*b1+a2*b2)/(b1*b1+b2*b2)<<" "<<(a2*b1-a1*b2)/(b1*b1+b2*b2)<<"\n";break;
-        }
-    }
-     
-}
+
+int main()
+{
+	int input=0;
+	
+	cin>>input;
+	while(input--)
+	{
+		int ai=0,a=0,bi=0,b=0;
+		char w;
+		
+		cin>>w>>ai>>a>>bi>>b;
+		switch(w) 
+			case '+':cout<<ai+bi<<" "<<a+b<<endl;break;
+			case '-':cout<<ai-bi<<" "<<a-b<<endl;break;
+			case '*':cout<<ai*bi-a*b<<" "<<a*bi+ai*b<<endl;break;
+			case '/':cout<<(ai*bi+a*b)/(bi*bi+b*b)<<" "<<a*bi-ai*b/(bi*bi+b*b)<<endl;break;
+		}
+	}
+	system("pause");
+	return 0;
+} 
